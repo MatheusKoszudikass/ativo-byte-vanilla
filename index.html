@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=League+Gothic&family=Poppins:wght@400;500;700&display=swap"
         rel="stylesheet">
@@ -27,11 +28,11 @@
             </ul>
         </nav>
     </header>
-    <section>
+    <section id="container">
         <div class="list">
-            <div class="item">
+            <div class="item active">
                 <div class="service-img">
-                    <img src="./assets/img/carrosel/landPage Fundo transparente.png" alt="landPage">
+                    <img src="./assets/img/carrossel/ServicoLandPage.png" alt="landPage">
                 </div>
                 <div class="content">
                     <p class="service-information">
@@ -48,11 +49,51 @@
                     <button class="information">Saiba mais</button>
                 </div>
             </div>
+
+            <div class="item">
+                <div class="service-img">
+                    <img src="./assets/img/carrossel/ServicoSass.png" alt="landPage">
+                </div>
+                <div class="content">
+                    <p class="service-information">
+                        Serviço
+                    </p>
+                    <h2>
+                        Sass
+                    </h2>
+                    <p class="description">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis libero ad natus. Voluptatum,
+                        incidunt quaerat? Sint in ut aspernatur unde, animi qui, cumque repellat sed nulla nihil quod,
+                        quibusdam vero.
+                    </p>
+                    <button class="information">Saiba mais</button>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="service-img">
+                    <img src="./assets/img/carrossel/ServicoE-COMMERCE.png" alt="landPage">
+                </div>
+                <div class="content">
+                    <p class="service-information">
+                        Serviço
+                    </p>
+                    <h2>
+                        E-commerce
+                    </h2>
+                    <p class="description">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis libero ad natus. Voluptatum,
+                        incidunt quaerat? Sint in ut aspernatur unde, animi qui, cumque repellat sed nulla nihil quod,
+                        quibusdam vero.
+                    </p>
+                    <button class="information">Saiba mais</button>
+                </div>
+            </div>
         </div>
 
         <div class="arrows">
-            <button><img src="/assets//img/carrosel/seta.svg" alt="seta esquerda"></button>
-            <button><img src="/assets//img/carrosel/seta.svg" alt="seta direita"></button>
+            <button id="prev"><img src="/assets//img/carrossel/seta.svg" alt="seta esquerda"></button>
+            <button id="next"><img src="/assets//img/carrossel/seta.svg" alt="seta direita"></button>
         </div>
 
         <div class="indicators">
@@ -65,6 +106,9 @@
         </div>
 
     </section>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
