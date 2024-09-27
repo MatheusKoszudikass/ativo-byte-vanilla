@@ -29,6 +29,7 @@ function addPauseEvents(item) {
     item.addEventListener('mouseout', startAutoSlide); // Reiniciar o slide ao tirar o mouse
 }
 
+
 // Função para mostrar o próximo item
 function nextItem() {
     let itemActive = container.querySelector('.list .item.active');
@@ -44,14 +45,14 @@ function nextItem() {
 
     items[active].classList.add('active');
     addPauseEvents(items[active]); // Adiciona os eventos ao novo item ativo
-    // updateDots(); // Atualiza os indicadores
+    updateDots(); // Atualiza os indicadores
 }
 
 // Função para mostrar o item anterior
 function prevItem() {
     let itemActive = container.querySelector('.list .item.active');
     itemActive.classList.remove('active');
-    // removePauseEvents(itemActive); // Remove os eventos do item anterior
+    removePauseEvents(itemActive); // Remove os eventos do item anterior
 
     // Decrementa o índice ativo e faz o loop
     if (active - 1 < firstPosition) {
@@ -62,7 +63,7 @@ function prevItem() {
 
     items[active].classList.add('active');
     addPauseEvents(items[active]); // Adiciona os eventos ao novo item ativo
-    // updateDots(); // Atualiza os indicadores
+    updateDots(); // Atualiza os indicadores
 }
 
 // Função para iniciar o slide automático
