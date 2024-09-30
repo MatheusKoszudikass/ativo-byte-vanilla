@@ -18,26 +18,34 @@ header {
   position: fixed;
   top: 0;
   left: 0;
+  right: 0;
   width: 100%;
   padding: 20px 100px;
-  background: rgb(0, 0, 0);
+  background-image: radial-gradient(rgb(0, 0, 0), #202020);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 100;
+  z-index: 1;
 
   & .logo {
     font-size: 32px;
     color: #ffa500;
     text-decoration: none;
     font-weight: 700;
+
+    & img {
+      left: 100%;
+      width: auto; /* Mantém a proporção do logo */
+      max-width: 150px; /* Controla o tamanho máximo do logo */
+      height: auto; /* Para garantir que o logo mantenha a proporção */
+    }
   }
 
   & .navbar a {
     position: relative;
     font-size: 18px;
-    color: #ffa500;
-    font-weight: 500;
+    color: white;
+    font-weight: 700;
     text-decoration: none;
     margin-left: 100px;
   }
@@ -54,6 +62,22 @@ header {
 
   & .navbar a:hover::before {
     width: 100%;
+  }
+
+  & .logo-mobile img {
+    display: none;
+  }
+
+  & .mobile-menu ul {
+    display: none;
+  }
+
+  & .menu-mobile-icon {
+    display: none;
+  }
+
+  & .navbar-img {
+    display: none;
   }
 }
 
@@ -213,7 +237,7 @@ section {
   & .list {
     position: relative;
     overflow: hidden;
-    
+
     & .item {
       transform: translateX(100vw);
       transition: 0.5s;
@@ -273,30 +297,23 @@ section {
 }
 
 @media screen and (max-width: 1230px) {
-  * {
-    box-sizing: border-box;
-  }
-
-  body {
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-  }
   header {
+    height: 10%;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 20px 10px;
-    background: rgb(0, 0, 0);
+    padding: 20px 100px;
+    background: black;
+    display: flex;
     justify-content: space-between;
-    align-items: center;
-    z-index: 1;
 
     & .logo {
-      font-size: 32px;
-      color: #ffa500;
-      text-decoration: none;
-      font-weight: 10;
+      display: none;
+    }
+
+    & .nav-item {
+      display: none;
     }
 
     & .navbar a {
@@ -309,6 +326,41 @@ section {
 
     & .navbar a:hover::before {
       display: none;
+    }
+
+    & .menu-mobile-icon {
+      display: block;
+      margin-left: 116%;
+
+      & button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        align-items: center;
+
+        & img {
+          width: 50px;
+        }
+      }
+    }
+ 
+    & .mobile-menu {
+
+      & ul {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 1rem;
+      }
+
+      & .nav-item {
+        display: none;
+        padding-top: 1.2rem;
+      }
+    }
+
+    & .open {
+      display: block;
     }
   }
 
@@ -408,7 +460,7 @@ section {
           top: 50%;
           transform: translate(7%, -110%);
           justify-content: center;
-          width: 62%;
+          width: 70%;
 
           & img {
             width: 70%;
@@ -418,7 +470,7 @@ section {
 
       & .content {
         position: absolute;
-        right: 100px;
+        right: 10px;
         width: 70%;
         height: 100%;
         display: flex;

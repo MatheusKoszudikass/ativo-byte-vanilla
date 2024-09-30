@@ -1,3 +1,5 @@
+let menuIcon = document.querySelector('.menu-mobile-icon');
+let navbarMobile = document.querySelector('.mobile-menu');
 let prevButton = document.getElementById('prev');
 let nextButton = document.getElementById('next');
 let container = document.getElementById('container');
@@ -8,10 +10,17 @@ let dots = indicator.querySelectorAll('ul li');
 let active = 0;
 let firstPosition = 0;
 let lastPosition = items.length - 1;
-let intervalTime = 3000; // Trocar a cada 3 segundos
+let intervalTime = 3000; 
 let autoSlide;
 
-// Função para atualizar o indicador ativo
+function toggleActive(){
+    if(navbarMobile.classList.contains('open')){
+        navbarMobile.classList.remove('open')
+    }
+
+    navbarMobile.classList.add('open')
+}
+
 function updateDots() {
     indicator.querySelector('.active').classList.remove('active');
     dots[active].classList.add('active');
