@@ -4,6 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Serviço Sass para otimizar seu workflow de desenvolvimento. Oferecemos personalização de estilos, modularidade e manutenção facilitada para seu projeto.">
+    <meta name="description"
+        content="Serviço de E-commerce completo. Desenvolvemos soluções personalizadas para lojas online, com foco em segurança, escalabilidade e facilidade de uso.">
+    <meta name="description"
+        content="Oferecemos Landing Pages personalizadas para melhorar sua presença online. Nossos serviços incluem design responsivo, otimização para SEO e soluções para engajamento do usuário.">
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="icon" href="assets/icon/favicon-16x16.png">
     <link rel="icon" href="assets/icon/favicon-32x32.png">
@@ -14,67 +20,39 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=League+Gothic&family=Poppins:wght@400;500;700&display=swap"
         rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
     <title>Ativo Byte</title>
 </head>
 
 <body>
-    <header class="">
-        <a href="/" class="logo">
-            Ativo Byte
-        </a>
-
-        <nav class="navbar">
-            <a href="#">Home</a>
-            <a href="#">Serviços</a>
-            <a href="#">Contatos</a>
-        </nav>
-
-        <a href="" class="logo-mobile">
-            <img src="" alt="" class="img-mobile">
-        </a>
-
-        <div class="menu-mobile-icon"> 
-            <button onclick="toggleActive()">
-                <img src="assets/img/nav-bar-mobile.svg" alt="Ícone de cardápio">
-            </button>
-        </div>
-
-        <div class="mobile-menu">
-            <ul>
-                <li class="nav-item"><a href="" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="" class="nav-link">Serviços</a></li>
-                <li class="nav-item"><a href="" class="nav-link">Contatos</a></li>
-            </ul>
-        </div>
-    </header>
+    <div id="header-container">
+        <!-- injetado conforme o dispositivo utilizando o injectHtml.js -->
+    </div>
     <section id="container">
         <div class="list">
             <div class="item active">
                 <div class="content">
+                    <div class="service-img">
+                        <img id="responsive-img" alt="landPage">
+                    </div>
                     <p class="service-information">
-                        Serviços
+                        Serviço
                     </p>
                     <h2>
                         Lading Page
                     </h2>
                     <p class="description">
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis libero ad natus. Voluptatum,
-                        incidunt quaerat? Sint in ut aspernatur unde, animi qui, cumque repellat sed nulla nihil quod,
-                        quibusdam vero.
+                        Oferecemos Landing Pages personalizadas para melhorar sua presença online.
+                        Nossos serviços incluem design responsivo, otimização para SEO e soluções para engajamento do
+                        usuário.
                     </p>
                     <button class="information">Saiba mais</button>
                 </div>
-                <div class="service-img">
-                    <img src="./assets/img/carrossel/ServicoLandPage.png" alt="landPage">
-                </div>
             </div>
-
             <div class="item">
                 <div class="content">
+                    <div class="service-img">
+                        <img id="responsive-img1" alt="Sass" loading="lazy">
+                    </div>
                     <p class="service-information">
                         Serviço
                     </p>
@@ -82,19 +60,17 @@
                         Sass
                     </h2>
                     <p class="description">
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis libero ad natus. Voluptatum,
-                        incidunt quaerat? Sint in ut aspernatur unde, animi qui, cumque repellat sed nulla nihil quod,
-                        quibusdam vero.
+                        Serviço Sass para otimizar seu workflow de desenvolvimento.
+                        Oferecemos personalização de estilos, modularidade e manutenção facilitada para seu projeto..
                     </p>
                     <button class="information">Saiba mais</button>
                 </div>
-                <div class="service-img">
-                    <img src="./assets/img/carrossel/ServicoSass.png" alt="landPage">
-                </div>
             </div>
-
             <div class="item">
                 <div class="content">
+                    <div class="service-img">
+                        <img id="responsive-img2" alt="E-commerce" loading="lazy">
+                    </div>
                     <p class="service-information">
                         Serviço
                     </p>
@@ -102,34 +78,33 @@
                         E-commerce
                     </h2>
                     <p class="description">
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis libero ad natus. Voluptatum,
-                        incidunt quaerat? Sint in ut aspernatur unde, animi qui, cumque repellat sed nulla nihil quod,
-                        quibusdam vero.
+                        Serviço de E-commerce completo.
+                        Desenvolvemos soluções personalizadas para lojas online,
+                        com foco em segurança, escalabilidade e facilidade de uso..
                     </p>
                     <button class="information">Saiba mais</button>
                 </div>
-                <div class="service-img">
-                    <img src="./assets/img/carrossel/ServicoE-COMMERCE.png" alt="landPage">
-                </div>
+            </div>
+
+            <div id="prev">
+                <button><img src="/assets//img/carrossel/seta.svg" alt="seta esquerda"></button>
+            </div>
+            <div id="next">
+                <button><img src="/assets//img/carrossel/seta.svg" alt="seta direita"></button>
+            </div>
+            <div class="indicators">
+                <ul>
+                    <li class="active"></li>
+                    <li></li>
+                    <li></li>
+                </ul>
             </div>
         </div>
-
-        <div class="arrows">
-            <button id="prev"><img src="/assets//img/carrossel/seta.svg" alt="seta esquerda"></button>
-            <button id="next"><img src="/assets//img/carrossel/seta.svg" alt="seta direita"></button>
-        </div>
-
-        <div class="indicators">
-            <div class="number"></div>
-            <ul>
-                <li class="active"></li>
-                <li></li>
-                <li></li>
-            </ul>
-        </div>
-
     </section>
-
+    <div>
+        <h1 style="color: white;">Em construção</h1>
+    </div>
+    <script src="js/injectHtml.js"></script>
     <script src="js/script.js"></script>
 </body>
 

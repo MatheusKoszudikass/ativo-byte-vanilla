@@ -1,5 +1,4 @@
 let menuIcon = document.querySelector('.menu-mobile-icon');
-let navbarMobile = document.querySelector('.mobile-menu');
 let prevButton = document.getElementById('prev');
 let nextButton = document.getElementById('next');
 let container = document.getElementById('container');
@@ -10,15 +9,64 @@ let dots = indicator.querySelectorAll('ul li');
 let active = 0;
 let firstPosition = 0;
 let lastPosition = items.length - 1;
-let intervalTime = 3000; 
+let intervalTime = 5000; 
 let autoSlide;
+let pauseTime = 10800;
+let pauseTimeout;
+let lastClickTime = 0;
+let clickInterval = 300;
+let isPaused = true;
 
-function toggleActive(){
-    if(navbarMobile.classList.contains('open')){
-        navbarMobile.classList.remove('open')
+// Dispositivos moveis
+let touchStartX = 0;
+let touchEndX = 0;
+
+function resetSlideAfterPause() {
+    clearTimeout(pauseTimeout);
+
+    pauseTimeout = setTimeout(() => {
+        startAutoSlide();
+        isPaused = false;
+    }, pauseTime)
+}
+
+function handleTouchStart(event) {
+    touchStartX = event.changedTouches ? event.changedTouches[0].screenX : event.screenX;
+}
+
+function handleTouchMove(event) {
+    touchEndX = event.changedTouches[0].screenX;
+}
+
+function handleTouchEnd(event) {
+    touchEndX = event.changedTouches ? event.changedTouches[0].screenX : event.screenX;
+    if (touchEndX < touchStartX) {
+        nextItem(); // Deslizar para a esquerda, vai para o próximo item
+        stopAutoSlide();
+        intervalTime = 5000; 
+    } else if (touchEndX > touchStartX) {
+        prevItem(); // Deslizar para a direita, vai para o item anterior
+        stopAutoSlide();
+        intervalTime = 5000; 
     }
+    resetSlideAfterPause();
+}
 
-    navbarMobile.classList.add('open')
+function handleClick() {
+  stopAutoSlide();
+  resetSlideAfterPause();
+}
+
+function toggleMenu() {
+    let navbarMobile = document.querySelector('.mobile-menu');
+    let MobileSection = document.getElementById('container'); 
+    navbarMobile.classList.toggle('open'); 
+
+    if (navbarMobile.classList.contains('open')) {
+        MobileSection.classList.add('open');
+    } else {
+        MobileSection.classList.remove('open');
+    }
 }
 
 function updateDots() {
@@ -26,24 +74,31 @@ function updateDots() {
     dots[active].classList.add('active');
 }
 
-// Função para remover eventos de pausa do item ativo
-function removePauseEvents(item) {
-    item.removeEventListener('mouseover', stopAutoSlide);
-    item.removeEventListener('mouseout', startAutoSlide);
-}
-
 // Função para adicionar eventos de pausa ao novo item ativo
 function addPauseEvents(item) {
+    item.addEventListener('click', handleClick);
+    item.addEventListener('touchstart', handleTouchStart);
+    item.addEventListener('touchend', handleTouchEnd);
     item.addEventListener('mouseover', stopAutoSlide); // Pausar o slide ao passar o mouse
     item.addEventListener('mouseout', startAutoSlide); // Reiniciar o slide ao tirar o mouse
 }
 
 
+// Função para remover eventos de pausa do item ativo
+function removePauseEvents(item) {
+    item.removeEventListener('click', handleClick);
+    item.removeEventListener('touchstart', handleTouchStart);
+    item.removeEventListener('touchmove', handleTouchMove);
+    item.removeEventListener('touchend', handleTouchEnd);
+    item.removeEventListener('mouseover', stopAutoSlide);
+    item.removeEventListener('mouseout', startAutoSlide);
+}
+
 // Função para mostrar o próximo item
 function nextItem() {
     let itemActive = container.querySelector('.list .item.active');
     itemActive.classList.remove('active');
-    // removePauseEvents(itemActive); // Remove os eventos do item anterior
+    removePauseEvents(itemActive); // Remove os eventos do item anterior
 
     // Incrementa o índice ativo e faz o loop
     if (active + 1 > lastPosition) {
@@ -54,6 +109,7 @@ function nextItem() {
 
     items[active].classList.add('active');
     addPauseEvents(items[active]); // Adiciona os eventos ao novo item ativo
+    intervalTime = 5000; 
     updateDots(); // Atualiza os indicadores
 }
 
@@ -72,6 +128,7 @@ function prevItem() {
 
     items[active].classList.add('active');
     addPauseEvents(items[active]); // Adiciona os eventos ao novo item ativo
+    intervalTime = 5000; 
     updateDots(); // Atualiza os indicadores
 }
 
