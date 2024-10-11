@@ -4,7 +4,8 @@ let imagensHeader = [
         mobile1230: 'assets/img/logo/LogoAtivoByte-156x64.webp',
         mobile898: 'assets/img/logo/LogoAtivoByte-140x58.webp',
         mobile514: 'assets/img/logo/LogoAtivoByte-140x58.webp',
-        mobile414: 'assets/img/logo/LogoAtivoByte-140x58.webp'
+        mobile414: 'assets/img/logo/LogoAtivoByte-140x58.webp',
+        mobile320: 'assets/img/logo/LogoAtivoByte-140x58.webp'
     },
 ];
 
@@ -21,11 +22,13 @@ let imagens = [
         mobile1230: 'assets/img/carrossel-mobile/LandPage/ServicoLandPage-300x255.webp',
         mobile898: 'assets/img/carrossel-mobile/LandPage/ServicoLandPage-250x255.webp',
         mobile514: 'assets/img/carrossel-mobile/LandPage/ServicoLandPage-295x219.webp',
-        mobile414: 'assets/img/carrossel-mobile/LandPage/ServicoLandPage-295x219.webp',
+        mobile414:  'assets/img/carrossel-mobile/LandPage/ServicoLandPage-300x255.webp',
+        mobile320:  'assets/img/carrossel-mobile/LandPage/ServicoLandPage-300x255.webp',
         mobile: 'assets/img/carrossel-mobile/ServicoLandPage-320x320.webp'
     },
     {
         id: 'responsive-img1',
+        mobile414: 'assets/img/carrossel-mobile/Sass/ServicoSass-320x320.webp',
         desktop1024x768: 'assets/img/carrossel/Sass/ServicoSass-249x260.webp',
         desktop1280x720: 'assets/img/carrossel/Sass/ServicoSass-400x250.webp',
         desktop1366x768: 'assets/img/carrossel/Sass/ServicoSass-435x330.webp',
@@ -34,7 +37,9 @@ let imagens = [
         desktop: 'assets/img/carrossel/ServicoSass.webp',
         mobile1230: 'assets/img/carrossel-mobile/Sass/ServicoSass-300x255.webp',
         mobile898: 'assets/img/carrossel-mobile/Sass/ServicoSass-250x255.webp',
-        mobile514: 'assets/img/carrossel-mobile/Sass/ServicoSass-295x219.webp'
+        mobile514: 'assets/img/carrossel-mobile/Sass/ServicoSass-295x219.webp',
+        mobile414: 'assets/img/carrossel-mobile/Sass/ServicoSass-300x255.webp',
+        mobile320: 'assets/img/carrossel-mobile/Sass/ServicoSass-300x255.webp'
     },
     {
         id: 'responsive-img2',
@@ -46,7 +51,26 @@ let imagens = [
         desktop: 'assets/img/carrossel/ServicoE-COMMERCE.webp',
         mobile1230: 'assets/img/carrossel-mobile/E-commerce/ServicoEcommerce-300x255.webp',
         mobile898: 'assets/img/carrossel-mobile/E-commerce/ServicoEcommerce-250x255.webp',
-        mobile514: 'assets/img/carrossel-mobile/E-commerce/ServicoEcommerce-295x219.webp'
+        mobile514: 'assets/img/carrossel-mobile/E-commerce/ServicoEcommerce-295x219.webp',
+        mobile414: 'assets/img/carrossel-mobile/E-commerce/ServicoEcommerce-300x255.webp',
+        mobile320: 'assets/img/carrossel-mobile/E-commerce/ServicoEcommerce-300x255.webp',
+    }
+];
+
+let imagemWhatsapp = 
+[
+    {
+        id: 'responsive-whatsapp-img',
+        desktop: 'assets/img/contato/IconsWhatsapp-120x120.webp',
+        desktop1280x720: 'assets/img/contato/IconsWhatsapp-82x82.webp',
+        desktop1366x768: 'assets/img/contato/IconsWhatsapp-120x120.webp',
+        desktop1854: 'assets/img/contato/IconsWhatsapp-96x96.webp',
+        desktop1920x1080: 'assets/img/contato/IconsWhatsapp-120x120.webp',
+        mobile1230: 'assets/img/contato/IconsWhatsapp-82x82.webp',
+        mobile898: 'assets/img/contato/IconsWhatsapp-82x82.webp',
+        mobile514: 'assets/img/contato/IconsWhatsapp-62x62.webp',
+        mobile414: 'assets/img/contato/IconsWhatsapp-62x62.webp',
+        mobile320: 'assets/img/contato/IconsWhatsapp-62x62.webp'
     }
 ];
 
@@ -62,6 +86,7 @@ function injectDesktopHeader() {
                 <li><a href="#">Inicio</a></li>
                 <li><a href="#">Serviços</a></li>
                 <li><a href="#">Contato</a></li>
+                <li><a href="#">Sou cliente</a></li>
             </ul>
         </nav>
     </header>`;
@@ -89,6 +114,7 @@ function injectMobileHeader() {
                 <li class="nav-item"><a href="#" class="nav-link">Inicio</a></li>
                 <li class="nav-item"><a href="#" class="nav-link">Serviços</a></li>
                 <li class="nav-item"><a href="#" class="nav-link">Contato</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Sou cliente</a></li>
             </ul>
         </div>
     </header>`;
@@ -97,6 +123,8 @@ function injectMobileHeader() {
 
     updateImageHeader();
 };
+
+
 
 /**
  * @description
@@ -108,6 +136,8 @@ function updateImageHeader() {
     imagensHeader.forEach(item => {
         const imgElement = document.getElementById(item.id);
         const imageUrl =  applyUpdateImages(item);
+
+        console.log(imageUrl);
 
         imgElement.src = imageUrl;
     });
@@ -129,6 +159,16 @@ function updateImageItens() {
     });
 }
 
+function updateImageWhatsapp() {
+
+    imagemWhatsapp.forEach(item => {
+        const imgElement = document.getElementById(item.id);
+        const imageUrl = applyUpdateImages(item);
+        // Define o src da imagem
+        imgElement.src = imageUrl;
+    });
+}
+
 /**
  * @description
  * Fun o para atualizar a imagem de acordo com o tamanho da tela.
@@ -141,18 +181,17 @@ function applyUpdateImages(item) {
     let imageUrl = '';
 
     switch (true) {
+        case (window.innerWidth <= 320):
+            imageUrl = item.mobile320;
+            break;
         case (window.innerWidth <= 414):
-            imageUrl = item.mobile1230;
-            console.log(imageUrl);
+            imageUrl = item.mobile414;
             break;
         case (window.innerWidth <= 514):
             imageUrl = item.mobile514;
             break;
         case (window.innerWidth <= 898):
             imageUrl = item.mobile898;
-            break;
-        case (window.innerWidth <= 1024):
-            imageUrl = item.mobile1230;
             break;
         case (window.innerWidth <= 1230):
             imageUrl = item.mobile1230;
@@ -188,11 +227,12 @@ window.onresize = function () {
     updateImageHeader();
 }
 
-window.onload =  updateHeader(), updateImageItens();
+window.onload =  updateHeader(), updateImageItens(), updateImageWhatsapp();
 
 const resizeObserver = new ResizeObserver(() => {
     updateImageItens();
     updateHeader();
+    updateImageWhatsapp();
 });
 
 resizeObserver.observe(document.body);
