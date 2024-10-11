@@ -308,6 +308,77 @@ section {
   }
 }
 
+
+@media screen and (max-height: 870px) {
+
+  section {
+    .list {
+      top: 22%;
+      width: 70vw;
+      height: 50%;
+      margin: auto;
+      position: relative;
+      display: flex;
+  }
+ }
+}
+
+@media screen and (max-height: 799px) {
+
+  section {
+    .list {
+      top: 22%;
+      width: 70vw;
+      height: 55%;
+      margin: auto;
+      position: relative;
+      display: flex;
+  }
+ }
+}
+
+@media screen and (max-height: 725px) {
+
+  section {
+    .list {
+      top: 22%;
+      width: 70vw;
+      height: 65%;
+      margin: auto;
+      position: relative;
+      display: flex;
+  }
+ }
+}
+
+@media screen and (max-height: 620px) {
+
+  section {
+    .list {
+      top: 22%;
+      width: 70vw;
+      height: 75%;
+      margin: auto;
+      position: relative;
+      display: flex;
+  }
+ }
+}
+
+@media screen and (max-height: 540px) {
+
+  section {
+    .list {
+      top: 22%;
+      width: 70vw;
+      height: 85%;
+      margin: auto;
+      position: relative;
+      display: flex;
+  }
+ }
+}
+
 @media screen and (max-width: 1920px) {
   section {
     .list {
@@ -403,6 +474,7 @@ section {
 }
 
 @media screen and (max-width: 1230px) {
+
   .header-mobile {
     background-color: #000;
     z-index: 1; /* Colocar o header acima do conteúdo */
@@ -427,25 +499,45 @@ section {
         }
       }
     }
-
     .mobile-menu-icon {
       display: flex;
       align-items: center;
+    
       button {
-        display: flex;
-        width: auto;
-        background-color: transparent;
+        width: 40px;
+        height: 40px;
         border: none;
+        /* border: 1px solid #ccc;  */
+        border-radius: 2px;
+        background: transparent;
         cursor: pointer;
-        margin-top: 0;
-        z-index: 2;
-        position: fixed;
-
-        img {
-          display: flex;
-          width: 100%;
-          height: auto;
+        position: relative; 
+    
+        .line {
+          width: 30px;
+          height: 4px;
+          background-color: #ccc;
+          display: block;
+          margin: 6px auto;
+          position: relative;
+          transition: all 0.4s ease; /* Adiciona animação suave */
+          transform-origin: center;
         }
+      }
+
+            /* Estilo quando o botão está aberto */
+      & button.open-icon .line:nth-child(1) {
+        transform: translateY(5px) rotate(-45deg);
+        background-color: red;
+      }
+
+      & button.open-icon .line:nth-child(2) {
+        opacity: 0; /* Esconde a segunda linha */
+      }
+
+      & button.open-icon .line:nth-child(3) {
+        transform: translateY(-15px) rotate(45deg);
+        background-color: red;
       }
     }
   }
@@ -542,73 +634,145 @@ section {
   }
 
   @media screen and (max-width: 898px) {
-    .header-mobile {
-      background-color: #000;
-      z-index: 2;
-      position: fixed;
+  .header-mobile {
+    background-color: #000;
+    z-index: 1; /* Colocar o header acima do conteúdo */
+    position: fixed; /* Fixa o header no topo */
+    width: 100%;
 
-      .nav-bar-mobile {
+    .nav-bar-mobile {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      padding: 1rem 1rem;
+
+      .logo {
         display: flex;
-        justify-content: space-between;
-        width: 100%;
-        padding: 1rem 1.5rem;
+        width: 25%;
+        height: auto;
 
-        .logo {
+        & img {
           display: flex;
-          width: auto;
+          width: 100%;
           height: auto;
-
-          & img {
-            display: flex;
-            width: 100%;
-            height: auto;
-          }
-        }
-      }
-      .mobile-menu-icon {
-        display: flex;
-        align-items: center;
-        button {
-          display: flex;
-          width: auto;
-          background-color: transparent;
-          border: none;
-          cursor: pointer;
-          margin-top: 0;
-          z-index: 2;
-          position: relative;
-
-          img {
-            display: flex;
-            width: 100%;
-            height: auto;
-          }
         }
       }
     }
+    .mobile-menu-icon {
+      display: flex;
+      align-items: center;
+    
+      button {
+        width: 40px;
+        height: 40px;
+        border: none;
+        /* border: 1px solid #ccc;  */
+        border-radius: 2px;
+        background: transparent;
+        cursor: pointer;
+        position: relative; 
+    
+        .line {
+          width: 30px;
+          height: 4px;
+          background-color: #ccc;
+          display: block;
+          margin: 6px auto;
+          position: relative;
+          transition: all 0.4s ease; /* Adiciona animação suave */
+          transform-origin: center;
+        }
+      }
+
+            /* Estilo quando o botão está aberto */
+      & button.open-icon .line:nth-child(1) {
+        transform: translateY(5px) rotate(-45deg);
+        background-color: red;
+      }
+
+      & button.open-icon .line:nth-child(2) {
+        opacity: 0; /* Esconde a segunda linha */
+      }
+
+      & button.open-icon .line:nth-child(3) {
+        transform: translateY(-15px) rotate(45deg);
+        background-color: red;
+      }
+    }
+  }
+
+  .mobile-menu {
+    max-height: 0;
+    overflow: hidden;
+    background-color: black;
+    padding: 0; /* Inicialmente sem padding para evitar o espaçamento enquanto está fechado */
+    transition: max-height 0.6s ease, padding 0.6s ease; /* Adiciona transição para altura e padding */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+
+    ul {
+      display: block;
+      flex-direction: column;
+      text-align: center;
+      padding-bottom: 1rem;
+    }
+    .nav-item {
+      font-size: 1.15rem;
+      font-weight: 400;
+      color: white;
+      padding-top: 1rem;
+    }
+
+    .nav-link {
+      color: white;
+    }
+
+    & li a:hover {
+      padding: 1px 22px;
+      border-radius: 50px;
+      background-color: #fefefe;
+      color: black;
+    }
+
+    & li a:active {
+      border-radius: 100px;
+      background-color: #fefefe;
+      color: black;
+    }
+
+    &.open {
+      max-height: 180px; /* Define a altura máxima quando o menu está aberto */
+      padding: 20px 0; /* Adiciona o padding desejado ao abrir */
+    }
+  }
     section {
       .list {
-        width: 98vw;
-
+        width: 97vw;
         .item {
           .content {
             gap: 5px;
             .service-img {
+              left: 0;
               img {
+                
               }
             }
 
             .service-information {
               margin-right: 0;
+              font-size: 20px;
             }
 
             h2 {
               margin-right: 0;
+              font-size: 45px;
             }
 
             .description {
-              font-size: 13px;
-
+              font-size: 17px;
               margin-right: 0;
             }
 
@@ -634,515 +798,69 @@ section {
   }
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 514px) {
+
   .header-mobile {
-    background-color: #000;
-    z-index: 2;
-    position: relative;
+
 
     .nav-bar-mobile {
-      display: flex;
 
       .logo {
+        display: flex;
+        width: 25%;
+        height: auto;
+
         & img {
-        }
-      }
-
-      .mobile-menu-icon {
-        button {
-          background-color: transparent;
-          border: none;
-          cursor: pointer;
-          z-index: 3;
-          position: relative;
-
-          img {
-            width: 55%;
-            height: auto;
-          }
-        }
-      }
-    }
-  }
-
-  .mobile-menu {
-    display: none;
-    background-color: black; /* Fundo escuro */
-    padding: 20px 0; /* Espaçamento no menu */
-    position: absolute; /* Garante que ele esteja sobreposto ao conteúdo */
-    top: 100%; /* Coloca o menu logo abaixo do nav-bar */
-    left: 0;
-    width: 100%;
-    z-index: 2; /* Certifique-se de que o z-index seja menor que o do botão */
-
-    ul {
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-      padding-bottom: 1rem;
-    }
-    .nav-item {
-      font-size: 1.15rem;
-      font-weight: 400;
-      color: white;
-      padding-top: 1rem;
-      list-style: none;
-    }
-
-    .nav-link {
-      text-decoration: none; /* Remove o sublinhado do link */
-      color: white; /* Define a cor do texto do link */
-    }
-
-    &.open {
-      display: block; /* Mostra o menu quando a classe "open" for aplicada */
-    }
-  }
-
-  /* dispositivos 360px */
-  section {
-    flex-direction: column;
-
-    & .list {
-      width: 100%;
-      height: 100%;
-      padding-top: 100%;
-      margin: 0;
-
-      & .item {
-        position: flex;
-        inset: 0;
-
-        & .service-img {
-          position: flex;
-          top: 65%;
-          transform: translate(28%, -100%);
-          justify-content: center;
+          display: flex;
           width: 100%;
-          height: auto;
+          height: 100%;
         }
       }
+    }
+  }
 
-      & .content {
-        position: relative;
-        top: 10%;
-        left: -2%;
-        width: 100%;
-        height: 115%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: end;
-        gap: 20px;
+  section {
+    .list {
+      height: 81vw;
+      width: 97vw;
+      .item {
 
-        & .service-infomation {
-          font-weight: bold;
-        }
+        .content {
+          gap: 5px;
 
-        & h2 {
-          font-size: 35px;
-          line-height: 1em;
-          font-family: "League Gothic", sans-serif;
-        }
+          .service-img {
+            top: 0;
+            width: 64%;
+            height: 57%;
+            left: 0;
+            img {
+              object-fit: contain;
+            }
+          }
 
-        & .description {
-          font-size: 12px;
-          text-align: right;
-          max-width: 400px;
-        }
+          .service-information {
+            margin-top: 30%;
+            margin-right: 0;
+            font-size: 15px;
+          }
 
-        & .information {
-          border-radius: 30px;
-          height: 30px;
-          width: 120px;
-          text-transform: uppercase;
-          border: 2px solid #ffffff;
-          background-color: #ffffff;
-          color: #000;
-          cursor: pointer;
-          font-size: 20px;
-          font-weight: bold;
-          font-family: "League Gothic", sans-serif;
+          h2 {
+            margin-right: 0;
+            font-size: 40px;
+          }
 
-          &:hover {
-            background-color: #7dd1d4;
-            cursor: pointer;
+          .description {
+            width: 100%;
+            font-size: 20px;
+            margin-right: 0;
+          }
+
+          .information {
+            top: 100%;
+            right: 0;
+            font-size: 12px;
           }
         }
-
-        &::before {
-          display: none;
-        }
-      }
-
-      .arrows {
-        display: none;
-
-        & button {
-          display: none;
-        }
-      }
-    }
-  }
-}
-
-/* @media screen and (max-width: 1080px) and (max-height: 2400px) {
-  section {
-    .indicators {
-      margin-top: 200%;
-    }
-  }
-}
-
-@media screen and (max-width: 912px) and (max-height: 1368px) {
-  section {
-    .indicators {
-      top: 34%;
-    }
-  }
-}
-
-
-@media screen and (max-width: 800px) and (max-height: 1280px) {
-  section {
-
-    .indicators {
-      margin-top: -26%;
-    }
-  }
-}
-
-@media screen and (max-width: 712px) and (max-height: 1138px) {
-  section {
-
-    .indicators {
-      top: 46%;
-    }
-
-  }
-}
-
-@media screen and (max-width: 820px) and (max-height: 1180px) {
-  section {
-
-    .indicators {
-      margin-top: -19%;
-    }
-
-  }
-}
-
-@media screen and (max-width: 768px) and (max-height: 1024px) {
-  section {
-
-    & .list {
-
-      & .item {
-
-        & .service-img {
-          top: 50%;
-          transform: translate(25%, -100%);
-        }
-      }
-
-      &.content {
-        top: 10%;
-        height: 115%;
-
-        & .service-infomation {
-          font-weight: bold;
-        }
-
-        & h2 {
-          font-size: 700vw;
-          line-height: 2em;
-          font-family: "League Gothic", sans-serif;
-        }
-
-        &::before {
-          display: none;
-        }
-      }
-    }
-
-    .arrows {
-      display: none;
-
-      & button {
-        display: none;
-      }
-    }
-    .indicators {
-      margin-top: -12%;
-    }
-
-  }
-}
-
-@media screen and (max-width: 430px) and (max-height: 932px) {
-  section {
-    
-    & .list {
-
-      & .item {
-
-        & .service-img {
-          top: 65%;
-          transform: translate(25%, -100%);
-        }
-      }
-
-      & .content {
-        top: 10%;
-        height: 115%;
-
-        & h2 {
-          font-size: 48px;
-        }
-
-        &::before {
-          display: none;
-        }
-      }
-    }
-
-    .arrows {
-      display: none;
-
-      & button {
-        display: none;
-      }
-    }
-    .indicators {
-      top: 47%;
-    }
-  }
-}
-
-@media screen and (max-width: 414px) and (max-height: 896px) {
-  section {
-
-    .indicators {
-      top: 47%;
-    }
-
-  }
-}
-
-@media screen and (max-width: 344px) and (max-height: 882px) {
-  section {
-    height: 50vh;
-
-    .indicators {
-      top: 56%;
-    }
-
-  }
-}
-
-
-@media screen and (max-width: 390px) and (max-height: 844px) {
-  section {
-
-    .indicators {
-      top: 49%;
-    }
-
-  }
-}
-
-@media screen and (max-height: 800px) {
-  section {
-
-    .indicators {
-      margin-top: -23%;
-    }
-
-  }
-}
-
-@media screen and (max-width: 360px) and (max-height: 740px) {
-  section {
-    
-    & .list {
-
-      & .item {
-
-        & .service-img {
-          top: 65%;
-          transform: translate(25%, -100%);
-        }
-      }
-
-      & .content {
-        top: 10%;
-        height: 115%;
-
-        & h2 {
-          font-size: 40px;
-        }
-
-        &::before {
-          display: none;
-        }
-      }
-    }
-
-    .arrows {
-      display: none;
-
-      & button {
-        display: none;
-      }
-    }
-    .indicators {
-      top: 56%;
-    }
-
-  }
-}
-
-@media screen and (max-width: 540px) and (max-height: 720px) {
-  section {
-
-    .indicators {
-      margin-top: 3%;
-    }
-  }
-}
-
-@media screen and (max-width: 375px) and (max-height: 667px) {
-  section {
-
-    .indicators {
-      margin-top: 13%;
-    }
-  }
-}
-
-@media screen and (max-width: 384px)  and (max-height: 640px) {
-  section {
-
-    .indicators {
-      top: 62%;
-    }
-  }
-}
-
-@media screen and (max-width: 360px)  and (max-height: 640px) {
-  section {
-
-    .indicators {
-      top: 45%;
-    }
-  }
-}
-
-@media screen and (max-width: 320px)  and (max-height: 658px) {
-  section {
-
-    .indicators {
-      top: 52%;
-    }
-  }
-}
-
-@media screen and (max-width: 1024px)  and (max-height: 600px) {
-  section {
-
-    .indicators {
-      top: 125%;
-    }
-  }
-}
-
-@media screen  and (max-width: 640px) and (max-height: 360px) {
-  section {
-
-    .indicators {
-      top: 152%;
-    }
-  }
-} */
-
-@media screen and (max-width: 320px) {
-  .header-mobile {
-    background-color: #000;
-    z-index: 2;
-    position: relative; /* Garante que o conteúdo esteja dentro do fluxo correto */
-
-    .nav-bar-mobile {
-      display: flex;
-      justify-content: space-between;
-      padding: 1rem 0.1rem;
-
-      .logo {
-        display: flex;
-        align-items: flex-start;
-        margin-right: 0;
-        font-size: 25px;
-        text-decoration: none;
-        color: #ffa500;
-      }
-
-      .mobile-menu-icon {
-        button {
-          background-color: transparent;
-          border: none;
-          cursor: pointer;
-          z-index: 3; /* Aumenta a prioridade do botão */
-          position: relative;
-
-          img {
-            width: 55%;
-            height: auto;
-          }
-        }
-      }
-    }
-  }
-
-  .mobile-menu {
-    display: none;
-    background-color: black; /* Fundo escuro */
-    padding: 20px 0; /* Espaçamento no menu */
-    position: absolute; /* Garante que ele esteja sobreposto ao conteúdo */
-    top: 100%; /* Coloca o menu logo abaixo do nav-bar */
-    left: 0;
-    width: 100%;
-    z-index: 2; /* Certifique-se de que o z-index seja menor que o do botão */
-
-    ul {
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-      padding-bottom: 1rem;
-    }
-    .nav-item {
-      font-size: 1.15rem;
-      font-weight: 400;
-      color: white;
-      padding-top: 1rem;
-      list-style: none;
-    }
-
-    .nav-link {
-      text-decoration: none; /* Remove o sublinhado do link */
-      color: white; /* Define a cor do texto do link */
-    }
-
-    &.open {
-      display: block; /* Mostra o menu quando a classe "open" for aplicada */
-    }
-  }
-
-  /* dispositivos 320px */
-  section {
-    height: 101vh;
-
-    & .list {
-      .indicators {
-        top: 62%;
       }
 
       #prev {
@@ -1152,18 +870,107 @@ section {
       #next {
         display: none;
       }
+    }
+  }
+}
 
-      &::before {
+@media screen and (max-width: 414px) {
+
+  .open {
+    padding-top: 149px;
+    transition: max-height 0.6s ease, padding 0.6s ease; /* Adiciona transição para altura e padding */
+  }
+  section {
+    .list {
+      height: 100vw;
+      width: 97vw;
+      .item {
+        .content {
+          gap: 10px;
+          .service-img {
+            left: 0;
+            img {
+              
+            }
+          }
+
+          .service-information {
+            margin-right: 0;
+            font-size: 15px;
+          }
+
+          h2 {
+            margin-right: 0;
+            font-size: 40px;
+          }
+
+          .description {
+            font-size: 16px;
+            margin-right: 0;
+          }
+
+          .information {
+            margin-right: 0;
+          }
+        }
+      }
+
+      #prev {
+        display: none;
+      }
+
+      #next {
         display: none;
       }
     }
   }
+}
 
-  .arrows {
-    display: none;
+@media screen and (max-width: 382px) {
+  section {
+    .list {
+      height: 100vw;
+      width: 97vw;
+      .item {
+        .content {
+          gap: 10px;
+          .service-img {
+            left: 0;
+            img {
+              
+            }
+          }
 
-    & button {
-      display: none;
+          .service-information {
+            margin-right: 0;
+            font-size: 15px;
+          }
+
+          h2 {
+            margin-right: 0;
+            font-size: 35px;
+          }
+
+          .description {
+            font-size: 14px;
+            margin-right: 0;
+          }
+
+          .information {
+            margin-right: 0;
+          }
+        }
+      }
+
+      #prev {
+        display: none;
+      }
+
+      #next {
+        display: none;
+      }
     }
   }
 }
+
+

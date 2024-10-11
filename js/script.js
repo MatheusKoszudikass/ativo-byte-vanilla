@@ -58,9 +58,11 @@ function handleClick() {
 }
 
 function toggleMenu() {
+    let navbarMobileIcon = document.getElementById('open-icon');
     let navbarMobile = document.querySelector('.mobile-menu');
     let MobileSection = document.getElementById('container'); 
-    navbarMobile.classList.toggle('open'); 
+    navbarMobile.classList.toggle('open');
+    navbarMobileIcon.classList.toggle('open-icon');
 
     if (navbarMobile.classList.contains('open')) {
         MobileSection.classList.add('open');
