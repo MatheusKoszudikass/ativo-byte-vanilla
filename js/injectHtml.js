@@ -12,13 +12,12 @@ let imagensHeader = [
 let imagens = [
     {
         id: 'responsive-img',
-        desktop1230x713: 'assets/img/carrossel/LandPage/ServicoLandPage-350x250.webp',
-        desktop1024x768: 'assets/img/carrossel/LandPage/ServicoLandPage-249x260.webp',
-        desktop1280x720: 'assets/img/carrossel/LandPage/ServicoLandPage-400x250.webp',
-        desktop1366x768: 'assets/img/carrossel/LandPage/ServicoLandPage-435x330.webp',
-        desktop1854: 'assets/img/carrossel/LandPage/ServicoLandPage-455x350.webp',
-        desktop1920x1080: 'assets/img/carrossel/LandPage/ServicoLandPage-672x395.webp',
         desktop: 'assets/img/carrossel/ServicoLandPage.webp',
+        desktop1920x1080: 'assets/img/carrossel/LandPage/ServicoLandPage-672x395.webp',
+        desktop1854: 'assets/img/carrossel/LandPage/ServicoLandPage-455x350.webp',
+        desktop1366x768: 'assets/img/carrossel/LandPage/ServicoLandPage-435x330.webp',
+        desktop1280x720: 'assets/img/carrossel/LandPage/ServicoLandPage-400x250.webp',
+        desktop1024x768: 'assets/img/carrossel/LandPage/ServicoLandPage-249x260.webp',
         mobile1230: 'assets/img/carrossel-mobile/LandPage/ServicoLandPage-300x255.webp',
         mobile898: 'assets/img/carrossel-mobile/LandPage/ServicoLandPage-250x255.webp',
         mobile514: 'assets/img/carrossel-mobile/LandPage/ServicoLandPage-295x219.webp',
@@ -28,13 +27,12 @@ let imagens = [
     },
     {
         id: 'responsive-img1',
-        mobile414: 'assets/img/carrossel-mobile/Sass/ServicoSass-320x320.webp',
-        desktop1024x768: 'assets/img/carrossel/Sass/ServicoSass-249x260.webp',
-        desktop1280x720: 'assets/img/carrossel/Sass/ServicoSass-400x250.webp',
-        desktop1366x768: 'assets/img/carrossel/Sass/ServicoSass-435x330.webp',
-        desktop1854: 'assets/img/carrossel/Sass/ServicoSass-455x350.webp',
-        desktop1920x1080: 'assets/img/carrossel/Sass/ServicoSass-672x395.webp',
         desktop: 'assets/img/carrossel/ServicoSass.webp',
+        desktop1920x1080: 'assets/img/carrossel/Sass/ServicoSass-672x395.webp',
+        desktop1854: 'assets/img/carrossel/Sass/ServicoSass-455x350.webp',
+        desktop1366x768: 'assets/img/carrossel/Sass/ServicoSass-435x330.webp',
+        desktop1280x720: 'assets/img/carrossel/Sass/ServicoSass-400x250.webp',
+        desktop1024x768: 'assets/img/carrossel/Sass/ServicoSass-249x260.webp',
         mobile1230: 'assets/img/carrossel-mobile/Sass/ServicoSass-300x255.webp',
         mobile898: 'assets/img/carrossel-mobile/Sass/ServicoSass-250x255.webp',
         mobile514: 'assets/img/carrossel-mobile/Sass/ServicoSass-295x219.webp',
@@ -43,12 +41,12 @@ let imagens = [
     },
     {
         id: 'responsive-img2',
-        desktop1024x768: 'assets/img/carrossel/E-commerce/ServicoEcommerce-249x260.webp',
-        desktop1280x720: 'assets/img/carrossel/E-commerce/ServicoEcommerce-400x250.webp',
-        desktop1366x768: 'assets/img/carrossel/E-commerce/ServicoEcommerce-435x330.webp',
-        desktop1854: 'assets/img/carrossel/E-commerce/ServicoEcommerce-455x350.webp',
-        desktop1920x1080: 'assets/img/carrossel/E-commerce/ServicoEcommerce-672x395.webp',
         desktop: 'assets/img/carrossel/ServicoE-COMMERCE.webp',
+        desktop1920x1080: 'assets/img/carrossel/E-commerce/ServicoEcommerce-672x395.webp',
+        desktop1854: 'assets/img/carrossel/E-commerce/ServicoEcommerce-455x350.webp',
+        desktop1366x768: 'assets/img/carrossel/E-commerce/ServicoEcommerce-435x330.webp',
+        desktop1280x720: 'assets/img/carrossel/E-commerce/ServicoEcommerce-400x250.webp',
+        desktop1024x768: 'assets/img/carrossel/E-commerce/ServicoEcommerce-249x260.webp',
         mobile1230: 'assets/img/carrossel-mobile/E-commerce/ServicoEcommerce-300x255.webp',
         mobile898: 'assets/img/carrossel-mobile/E-commerce/ServicoEcommerce-250x255.webp',
         mobile514: 'assets/img/carrossel-mobile/E-commerce/ServicoEcommerce-295x219.webp',
@@ -62,10 +60,10 @@ let imagemWhatsapp =
     {
         id: 'responsive-whatsapp-img',
         desktop: 'assets/img/contato/IconsWhatsapp-120x120.webp',
-        desktop1280x720: 'assets/img/contato/IconsWhatsapp-82x82.webp',
-        desktop1366x768: 'assets/img/contato/IconsWhatsapp-120x120.webp',
-        desktop1854: 'assets/img/contato/IconsWhatsapp-96x96.webp',
         desktop1920x1080: 'assets/img/contato/IconsWhatsapp-120x120.webp',
+        desktop1854: 'assets/img/contato/IconsWhatsapp-96x96.webp',
+        desktop1366x768: 'assets/img/contato/IconsWhatsapp-120x120.webp',
+        desktop1280x720: 'assets/img/contato/IconsWhatsapp-82x82.webp',
         mobile1230: 'assets/img/contato/IconsWhatsapp-82x82.webp',
         mobile898: 'assets/img/contato/IconsWhatsapp-82x82.webp',
         mobile514: 'assets/img/contato/IconsWhatsapp-62x62.webp',
@@ -73,6 +71,62 @@ let imagemWhatsapp =
         mobile320: 'assets/img/contato/IconsWhatsapp-62x62.webp'
     }
 ];
+
+let imagemFooter = [
+
+    {
+        id: 'responsive-logo-footer-gif',
+        desktop: 'assets/img/contato/footer/LogoAtivoByte.gif',
+        desktop1920x1080: 'assets/img/contato/footer/LogoAtivoByte.gif',
+        // desktop1854: 'assets/img/contato/footer/LogoAtivoByte-140x58.gif',
+        // desktop1366x768: 'assets/img/contato/footer/LogoAtivoByte-140x58.gif',
+        // desktop1280x720: 'assets/img/contato/footer/LogoAtivoByte-140x58.gif',
+        // mobile1230: 'assets/img/contato/footer/LogoAtivoByte-140x58.gif',
+        // mobile898: 'assets/img/contato/footer/LogoAtivoByte-140x58.gif',
+        // mobile514: 'assets/img/contato/footer/LogoAtivoByte-140x58.gif',
+        mobile414: 'assets/img/contato/footer/LogoAtivoByte.gif',
+        // mobile320: 'assets/img/contato/footer/LogoAtivoByte-140x58.gif'
+    },
+    {
+        id: 'responsive-social-media-img',
+        desktop: 'assets/img/contato/footer/FooterFacebook-52x52.webp',
+        desktop1920x1080: 'assets/img/contato/footer/FooterFacebook-52x52.webp',
+        desktop1854: 'assets/img/contato/footer/FooterFacebook-52x52.webp',
+        desktop1366x768: 'assets/img/contato/footer/FooterFacebook-32x32.webp',
+        desktop1280x720: 'assets/img/contato/footer/FooterFacebook-52x52.webp',
+        mobile1230: 'assets/img/contato/footer/FooterFacebook-52x52.webp',
+        mobile898: 'assets/img/contato/footer/FooterFacebook-52x52.webp',
+        mobile514: 'assets/img/contato/footer/FooterFacebook-52x52.webp',
+        mobile414: 'assets/img/contato/footer/FooterFacebook-32x32.webp',
+        mobile320: 'assets/img/contato/footer/FooterFacebook-32x32.webp'
+    },
+    {
+        id: 'responsive-social-media-img1',
+        desktop: 'assets/img/contato/footer/FooterInstagram-52x52.webp',
+        desktop1920x1080: 'assets/img/contato/footer/FooterInstagram-52x52.webp',
+        desktop1854: 'assets/img/contato/footer/FooterInstagram-52x52.webp',
+        desktop1366x768: 'assets/img/contato/footer/FooterInstagram-32x32.webp',
+        desktop1280x720: 'assets/img/contato/footer/FooterInstagram-52x52.webp',
+        mobile1230: 'assets/img/contato/footer/FooterInstagram-52x52.webp',
+        mobile898: 'assets/img/contato/footer/FooterInstagram-52x52.webp',
+        mobile514: 'assets/img/contato/footer/FooterInstagram-52x52.webp',
+        mobile414: 'assets/img/contato/footer/FooterInstagram-32x32.webp',
+        mobile320: 'assets/img/contato/footer/FooterInstagram-52x52.webp'
+    },
+    {
+        id: 'responsive-social-media-img2',
+        desktop: 'assets/img/contato/footer/FooterLinkedin-52x52.webp',
+        desktop1920x1080: 'assets/img/contato/footer/FooterLinkedin-52x52.webp',
+        desktop1854: 'assets/img/contato/footer/FooterLinkedin-52x52.webp',
+        desktop1366x768: 'assets/img/contato/footer/FooterLinkedin-32x32.webp',
+        desktop1280x720: 'assets/img/contato/footer/FooterLinkedin-52x52.webp',
+        mobile1230: 'assets/img/contato/footer/FooterLinkedin-52x52.webp',
+        mobile898: 'assets/img/contato/footer/FooterLinkedin-52x52.webp',
+        mobile514: 'assets/img/contato/footer/FooterLinkedin-52x52.webp',
+        mobile414: 'assets/img/contato/footer/FooterLinkedin-32x32.webp',
+        mobile320: 'assets/img/contato/footer/FooterLinkedin-52x52.webp'
+    }
+]
 
 
 function injectDesktopHeader() {
@@ -137,8 +191,6 @@ function updateImageHeader() {
         const imgElement = document.getElementById(item.id);
         const imageUrl =  applyUpdateImages(item);
 
-        console.log(imageUrl);
-
         imgElement.src = imageUrl;
     });
 }
@@ -164,6 +216,18 @@ function updateImageWhatsapp() {
     imagemWhatsapp.forEach(item => {
         const imgElement = document.getElementById(item.id);
         const imageUrl = applyUpdateImages(item);
+        // Define o src da imagem
+        imgElement.src = imageUrl;
+    });
+}
+
+function updateImageFooter() {
+
+    imagemFooter.forEach(item => {
+        const imgElement = document.getElementById(item.id);
+        const imageUrl = applyUpdateImages(item);
+
+        console.log(imageUrl);
         // Define o src da imagem
         imgElement.src = imageUrl;
     });
@@ -227,12 +291,13 @@ window.onresize = function () {
     updateImageHeader();
 }
 
-window.onload =  updateHeader(), updateImageItens(), updateImageWhatsapp();
+window.onload =  updateHeader(), updateImageItens(), updateImageWhatsapp(), updateImageFooter();
 
 const resizeObserver = new ResizeObserver(() => {
     updateImageItens();
     updateHeader();
     updateImageWhatsapp();
+    updateImageFooter();
 });
 
 resizeObserver.observe(document.body);
