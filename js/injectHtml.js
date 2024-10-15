@@ -9,7 +9,7 @@ let imagensHeader = [
     },
 ];
 
-let imagens = [
+let imagensItem = [
     {
         id: 'responsive-img',
         desktop: 'assets/img/carrossel/ServicoLandPage.webp',
@@ -21,7 +21,7 @@ let imagens = [
         mobile1230: 'assets/img/carrossel-mobile/LandPage/ServicoLandPage-300x255.webp',
         mobile898: 'assets/img/carrossel-mobile/LandPage/ServicoLandPage-250x255.webp',
         mobile514: 'assets/img/carrossel-mobile/LandPage/ServicoLandPage-295x219.webp',
-        mobile414:  'assets/img/carrossel-mobile/LandPage/ServicoLandPage-300x255.webp',
+        mobile414:  'assets/img/carrossel-mobile/LandPage/ServicoLandPage-257x236.webp',
         mobile320:  'assets/img/carrossel-mobile/LandPage/ServicoLandPage-300x255.webp',
         mobile: 'assets/img/carrossel-mobile/ServicoLandPage-320x320.webp'
     },
@@ -64,28 +64,28 @@ let imagemWhatsapp =
         desktop1854: 'assets/img/contato/IconsWhatsapp-96x96.webp',
         desktop1366x768: 'assets/img/contato/IconsWhatsapp-120x120.webp',
         desktop1280x720: 'assets/img/contato/IconsWhatsapp-82x82.webp',
-        mobile1230: 'assets/img/contato/IconsWhatsapp-82x82.webp',
-        mobile898: 'assets/img/contato/IconsWhatsapp-82x82.webp',
-        mobile514: 'assets/img/contato/IconsWhatsapp-62x62.webp',
-        mobile414: 'assets/img/contato/IconsWhatsapp-62x62.webp',
-        mobile320: 'assets/img/contato/IconsWhatsapp-62x62.webp'
+        mobile1230: 'assets/img/contato/IconsWhatsapp-75x75.webp',
+        mobile898: 'assets/img/contato/IconsWhatsapp-75x75.webp',
+        mobile514: 'assets/img/contato/IconsWhatsapp-75x75.webp',
+        mobile414: 'assets/img/contato/IconsWhatsapp-75x75.webp',
+        mobile320: 'assets/img/contato/IconsWhatsapp-75x75.webp'
     }
 ];
 
 let imagemFooter = [
 
     {
-        id: 'responsive-logo-footer-gif',
-        desktop: 'assets/img/contato/footer/LogoAtivoByte.gif',
-        desktop1920x1080: 'assets/img/contato/footer/LogoAtivoByte.gif',
-        // desktop1854: 'assets/img/contato/footer/LogoAtivoByte-140x58.gif',
-        // desktop1366x768: 'assets/img/contato/footer/LogoAtivoByte-140x58.gif',
-        // desktop1280x720: 'assets/img/contato/footer/LogoAtivoByte-140x58.gif',
-        // mobile1230: 'assets/img/contato/footer/LogoAtivoByte-140x58.gif',
-        // mobile898: 'assets/img/contato/footer/LogoAtivoByte-140x58.gif',
-        // mobile514: 'assets/img/contato/footer/LogoAtivoByte-140x58.gif',
-        mobile414: 'assets/img/contato/footer/LogoAtivoByte.gif',
-        // mobile320: 'assets/img/contato/footer/LogoAtivoByte-140x58.gif'
+        id: 'responsive-logo-footer-webm',
+        desktop: 'assets/img/contato/footer/LogoAtivoByte.webm',
+        desktop1920x1080: 'assets/img/contato/footer/LogoAtivoByte.webm',
+        desktop1854: 'assets/img/contato/footer/LogoAtivoByte.webm',
+        desktop1366x768: 'assets/img/contato/footer/LogoAtivoByte.webm',
+        desktop1280x720: 'assets/img/contato/footer/LogoAtivoByte.webm',
+        mobile1230: 'assets/img/contato/footer/LogoAtivoByte.webm',
+        mobile898: 'assets/img/contato/footer/LogoAtivoByte.webm',
+        mobile514: 'assets/img/contato/footer/LogoAtivoByte.webm',
+        mobile414: 'assets/img/contato/footer/LogoAtivoByte.webm',
+        mobile320: 'assets/img/contato/footer/LogoAtivoByte.webm',
     },
     {
         id: 'responsive-social-media-img',
@@ -203,7 +203,7 @@ function updateImageHeader() {
  */
 function updateImageItens() {
 
-    imagens.forEach(item => {
+    imagensItem.forEach(item => {
         const imgElement = document.getElementById(item.id);
         const imageUrl = applyUpdateImages(item);
         // Define o src da imagem
@@ -227,7 +227,6 @@ function updateImageFooter() {
         const imgElement = document.getElementById(item.id);
         const imageUrl = applyUpdateImages(item);
 
-        console.log(imageUrl);
         // Define o src da imagem
         imgElement.src = imageUrl;
     });
@@ -273,7 +272,7 @@ function applyUpdateImages(item) {
             imageUrl = item.desktop1920x1080;
             break;
         default:
-            imageUrl = item.desktop;
+            imageUrl = item.desktop1920x1080;
             break;
     }
     return imageUrl;
@@ -287,11 +286,11 @@ function updateHeader() {
     }
 }
 
-window.onresize = function () {
-    updateImageHeader();
-}
+// window.onresize = function () {
+//     updateImageHeader();
+// }
 
-window.onload =  updateHeader(), updateImageItens(), updateImageWhatsapp(), updateImageFooter();
+window.onload =  updateImageItens(), updateImageWhatsapp(), updateImageFooter();
 
 const resizeObserver = new ResizeObserver(() => {
     updateImageItens();
