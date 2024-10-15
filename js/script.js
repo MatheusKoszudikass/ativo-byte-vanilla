@@ -1,3 +1,4 @@
+
 let menuIcon = document.querySelector('.menu-mobile-icon');
 let prevButton = document.getElementById('prev');
 let nextButton = document.getElementById('next');
@@ -20,6 +21,18 @@ let isPaused = true;
 // Dispositivos moveis
 let touchStartX = 0;
 let touchEndX = 0;
+
+
+function scrollToSection(sectionId) {
+    const section = document.getElementById(sectionId);
+    const navHeight = document.querySelector('header').offsetHeight;
+    const sectionTop = section.getBoundingClientRect().top + window.scrollY - navHeight;
+    
+    window.scrollTo({
+        top: sectionTop,
+        behavior: 'smooth'
+    });
+}
 
 function resetSlideAfterPause() {
     clearTimeout(pauseTimeout);

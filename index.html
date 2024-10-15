@@ -4,6 +4,7 @@
 <head>
     <!-- <meta name="robots" content="noindex" /> -->
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
         content="Serviço Sass para otimizar seu workflow de desenvolvimento. Oferecemos personalização de estilos, modularidade e manutenção facilitada para seu projeto.">
@@ -22,7 +23,7 @@
 
 <body>
     <div id="header-container">
-        <!-- injetado conforme o dispositivo utilizando o injectHtml.js -->
+        <!-- injetado conforme o dispositivo. Utilizando o injectHtml.js -->
     </div>
     <section id="container">
         <div class="list">
@@ -42,7 +43,7 @@
                         Nossos serviços incluem design responsivo, otimização para SEO e soluções para engajamento do
                         usuário.
                     </p>
-                    <button class="information">Saiba mais</button>
+                    <button class="information" onclick="scrollToSection('landing-page')">Saiba mais</button>
                 </div>
             </div>
             <div class="item">
@@ -60,7 +61,7 @@
                         Serviço Sass para otimizar seu workflow de desenvolvimento.
                         Oferecemos personalização de estilos, modularidade e manutenção facilitada para seu projeto..
                     </p>
-                    <button class="information">Saiba mais</button>
+                    <button class="information" onclick="scrollToSection('sass')">Saiba mais</button>
                 </div>
             </div>
             <div class="item">
@@ -79,7 +80,7 @@
                         Desenvolvemos soluções personalizadas para lojas online,
                         com foco em segurança, escalabilidade e facilidade de uso..
                     </p>
-                    <button class="information">Saiba mais</button>
+                    <button class="information" onclick="scrollToSection('ecommerce')">Saiba mais</button>
                 </div>
             </div>
 
@@ -97,6 +98,28 @@
                 </ul>
             </div>
         </div>
+    </section>
+
+    <section id="servicos">
+        <h2>Nossos Serviços</h2>
+        
+        <article id="landing-page">
+            <h3>Landing Page</h3>
+            <img id="responsive-img" alt="Landing Page">
+            <p>Descrição completa sobre o serviço de Landing Page.</p>
+        </article>
+    
+        <article id="sass">
+            <h3>Sass</h3>
+            <img id="responsive-img1" alt="Sass">
+            <p>Descrição completa sobre o serviço Sass.</p>
+        </article>
+    
+        <article id="ecommerce">
+            <h3>E-commerce</h3>
+            <img id="responsive-img2" alt="E-commerce">
+            <p>Descrição completa sobre o serviço de E-commerce.</p>
+        </article>
     </section>
 
     <div class="whatsapp">

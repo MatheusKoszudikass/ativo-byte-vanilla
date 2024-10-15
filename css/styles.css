@@ -10,7 +10,8 @@
 
 @font-face {
   font-family: "League Gothic";
-  src: url(../assets/font/LeagueGothic-Regular-VariableFont_wdth.ttf);
+  src: url(../assets/font/LeagueGothic-Regular-VariableFont_wdth.woff) format('woff'),
+       url(../assets/font/LeagueGothic-Regular-VariableFont_wdth.ttf) format('truetype');
   font-display: swap;
 }
 
@@ -1758,6 +1759,36 @@
         }
       }
     }
+    section#servicos {
+
+      background-color: #f9f9f9; /* Cor de fundo suave */
+      padding: 20px; /* Espaçamento interno */
+      margin: 20px 0; /* Espaçamento externo */
+      border-radius: 8px; /* Bordas arredondadas */
+
+      & h2 {
+        text-align: center; /* Centraliza o título */
+        color: #333; /* Cor do texto */
+      }
+    }
+
+    section#servicos article {
+      margin: 15px 0; /* Espaçamento entre os artigos */
+      padding: 15px; /* Espaçamento interno dos artigos */
+      border: 1px solid #ddd; /* Borda leve */
+      border-radius: 5px; /* Bordas arredondadas */
+      transition: transform 0.2s; /* Animação ao passar o mouse */
+    }
+
+    section#servicos article:hover {
+      transform: scale(1.02); /* Aumenta o tamanho ao passar o mouse */
+    }
+
+    section#servicos img {
+      max-width: 100%; /* Imagem responsiva */
+      height: auto; /* Mantém a proporção */
+    }
+    
 
     .whatsapp {
       display: fixed;

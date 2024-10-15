@@ -138,7 +138,7 @@ function injectDesktopHeader() {
         <nav class="navbar">
             <ul>
                 <li><a href="#">Inicio</a></li>
-                <li><a href="#">Serviços</a></li>
+                <li><a onclick="scrollToSection('servicos')">Serviços</a></li>
                 <li><a href="#">Contato</a></li>
                 <li><a href="#">Sou cliente</a></li>
             </ul>
@@ -147,7 +147,7 @@ function injectDesktopHeader() {
 
     document.getElementById('header-container').innerHTML = desktopHeaderHtml;
 }
-{/* <img id="responsive-navbar-img" alt="Ícone de menu" class="ico"> */}
+
 function injectMobileHeader() {
     const mobileHeaderHtml = `
     <header class="header-mobile">
@@ -166,7 +166,7 @@ function injectMobileHeader() {
         <div class="mobile-menu">
             <ul>
                 <li class="nav-item"><a href="#" class="nav-link">Inicio</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Serviços</a></li>
+                <li class="nav-item"><a onclick="scrollToSection('servicos')" class="nav-link">Serviços</a></li>
                 <li class="nav-item"><a href="#" class="nav-link">Contato</a></li>
                 <li class="nav-item"><a href="#" class="nav-link">Sou cliente</a></li>
             </ul>
@@ -286,9 +286,6 @@ function updateHeader() {
     }
 }
 
-// window.onresize = function () {
-//     updateImageHeader();
-// }
 
 window.onload =  updateImageItens(), updateImageWhatsapp(), updateImageFooter();
 
