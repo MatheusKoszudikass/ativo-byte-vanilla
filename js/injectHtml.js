@@ -52,11 +52,117 @@ let imagensItem = [
         mobile514: 'assets/img/carrossel-mobile/E-commerce/ServicoEcommerce-295x219.webp',
         mobile414: 'assets/img/carrossel-mobile/E-commerce/ServicoEcommerce-300x255.webp',
         mobile320: 'assets/img/carrossel-mobile/E-commerce/ServicoEcommerce-300x255.webp',
+    },
+];
+
+let imagensWhatsappThemeLight = [
+    {
+        id: 'responsive-whatsapp-servico',
+        desktop: 'assets/img/servicos/ServicoWhatsLadingPage-Light-378x80.webp',
+        desktop1920x1080: 'assets/img/servicos/ServicoWhatsLadingPage-Light-378x80.webp',
+        desktop1854: 'assets/img/servicos/ServicoWhatsLadingPage-Light-378x80.webp',
+        desktop1366x768: 'assets/img/servicos/ServicoWhatsLadingPage-Light-378x80.webp',
+        desktop1280x720: 'assets/img/servicosServicoWhatsLadingPage-Light-378x80.webp',
+        mobile1230: 'assets/img/servicos/ServicoWhatsLadingPage-Light-378x80.webp',
+        mobile898: 'assets/img/servicos/ServicoWhatsLadingPage-Light-378x80.webp',
+        mobile514: 'assets/img/servicos/ServicoWhatsLadingPage-Light-378x80.webp',
+        mobile414: 'assets/img/servicos/ServicoWhatsLadingPage-Light-378x80.webp',
+        mobile320: 'assets/img/servicos/ServicoWhatsLadingPage-Light-378x80.webp'
+    },
+
+    {
+        id: 'responsive-whatsapp-servico1',
+        desktop: 'assets/img/servicos/ServicoWhatsSass-Light-378x80.webp',
+        desktop1920x1080: 'assets/img/servicos/ServicoWhatsSass-Light-378x80.webp',
+        desktop1854: 'assets/img/servicos/ServicoWhatsSass-Light-378x80.webp',
+        desktop1366x768: 'assets/img/servicos/ServicoWhatsSass-Light-378x80.webp',
+        desktop1280x720: 'assets/img/servicos/ServicoWhatsSass-Light-378x80.webp',
+        mobile1230: 'assets/img/servicos/ServicoWhatsSass-Light-378x80.webp',
+        mobile898: 'assets/img/servicos/ServicoWhatsSass-Light-378x80.webp',
+        mobile514: 'assets/img/servicos/ServicoWhatsSass-Light-378x80.webp',
+        mobile414: 'assets/img/servicos/ServicoWhatsSass-Light-378x80.webp',
+        mobile320: 'assets/img/servicos/ServicoWhatsSass-Light-378x80.webp'
+
+
+    },
+
+    {
+        id: 'responsive-whatsapp-servico2',
+        desktop: 'assets/img/servicos/ServicoWhatsEcommerce-Light-378x80.webp',
+        desktop1920x1080: 'assets/img/servicos/ServicoWhatsEcommerce-Light-378x80.webp',
+        desktop1854: 'assets/img/servicos/ServicoWhatsEcommerce-Light-378x80.webp',
+        desktop1366x768: 'assets/img/servicos/ServicoWhatsEcommerce-Light-378x80.webp',
+        desktop1280x720: 'assets/img/servicos/ServicoWhatsEcommerce-Light-378x80.webp',
+        mobile1230: 'assets/img/servicos/ServicoWhatsEcommerce-Light-378x80.webp',
+        mobile898: 'assets/img/servicos/ServicoWhatsEcommerce-Light-378x80.webp',
+        mobile514: 'assets/img/servicos/ServicoWhatsEcommerce-Light-378x80.webp',
+        mobile414: 'assets/img/servicos/ServicoWhatsEcommerce-Light-378x80.webp',
+        mobile320: 'assets/img/servicos/ServicoWhatsEcommerce-Light-378x80.webp'
+
+
+    },
+
+    {
+        id: 'responsive-whatsapp-img',
+        desktop: 'assets/img/contato/IconsWhatsapp-120x120.webp',
+        desktop1920x1080: 'assets/img/contato/IconsWhatsapp-120x120.webp',
+        desktop1854: 'assets/img/contato/IconsWhatsapp-96x96.webp',
+        desktop1366x768: 'assets/img/contato/IconsWhatsapp-120x120.webp',
+        desktop1280x720: 'assets/img/contato/IconsWhatsapp-82x82.webp',
+        mobile1230: 'assets/img/contato/IconsWhatsapp-75x75.webp',
+        mobile898: 'assets/img/contato/IconsWhatsapp-75x75.webp',
+        mobile514: 'assets/img/contato/IconsWhatsapp-75x75.webp',
+        mobile414: 'assets/img/contato/IconsWhatsapp-75x75.webp',
+        mobile320: 'assets/img/contato/IconsWhatsapp-75x75.webp'
     }
 ];
 
 let imagemWhatsapp = 
 [
+    {
+        id: 'responsive-whatsapp-servico',
+        desktop: 'assets/img/servicos/ServicoWhatsLadingPage-378x80.webp',
+        desktop1920x1080: 'assets/img/servicos/ServicoWhatsLadingPage-378x80.webp',
+        desktop1854: 'assets/img/servicos/ServicoWhatsLadingPage-378x80.webp',
+        desktop1366x768: 'assets/img/servicos/ServicoWhatsLadingPage-378x80.webp',
+        desktop1280x720: 'assets/img/servicos/ServicoWhatsLadingPage-378x80.webp',
+        mobile1230: 'assets/img/servicos/ServicoWhatsLadingPage-378x80.webp',
+        mobile898: 'assets/img/servicos/ServicoWhatsLadingPage-378x80.webp',
+        mobile514: 'assets/img/servicos/ServicoWhatsLadingPage-378x80.webp',
+        mobile414: 'assets/img/servicos/ServicoWhatsLadingPage-378x80.webp'
+    },
+
+    {
+        id: 'responsive-whatsapp-servico1',
+        desktop: 'assets/img/servicos/ServicoWhatsSass-378x80.webp',
+        desktop1920x1080: 'assets/img/servicos/ServicoWhatsSass-378x80.webp',
+        desktop1854: 'assets/img/servicos/ServicoWhatsSass-378x80.webp',
+        desktop1366x768: 'assets/img/servicos/ServicoWhatsSass-378x80.webp',
+        desktop1280x720: 'assets/img/servicos/ServicoWhatsSass-378x80.webp',
+        mobile1230: 'assets/img/servicos/ServicoWhatsSass-378x80.webp',
+        mobile898: 'assets/img/servicos/ServicoWhatsSass-378x80.webp',
+        mobile514: 'assets/img/servicos/ServicoWhatsSass-378x80.webp',
+        mobile414: 'assets/img/servicos/ServicoWhatsSass-378x80.webp',
+        mobile320: 'assets/img/servicos/ServicoWhatsSass-378x80.webp'
+
+
+    },
+
+    {
+        id: 'responsive-whatsapp-servico2',
+        desktop: 'assets/img/servicos/ServicoWhatsEcommerce-378x80.webp',
+        desktop1920x1080: 'assets/img/servicos/ServicoWhatsEcommerce-378x80.webp',
+        desktop1854: 'assets/img/servicos/ServicoWhatsEcommerce-378x80.webp',
+        desktop1366x768: 'assets/img/servicos/ServicoWhatsEcommerce-378x80.webp',
+        desktop1280x720: 'assets/img/servicos/ServicoWhatsEcommerce-378x80.webp',
+        mobile1230: 'assets/img/servicos/ServicoWhatsEcommerce-378x80.webp',
+        mobile898: 'assets/img/servicos/ServicoWhatsEcommerce-378x80.webp',
+        mobile514: 'assets/img/servicos/ServicoWhatsEcommerce-378x80.webp',
+        mobile414: 'assets/img/servicos/ServicoWhatsEcommerce-378x80.webp',
+        mobile320: 'assets/img/servicos/ServicoWhatsEcommerce-378x80.webp'
+
+
+    },
     {
         id: 'responsive-whatsapp-img',
         desktop: 'assets/img/contato/IconsWhatsapp-120x120.webp',
@@ -137,9 +243,9 @@ function injectDesktopHeader() {
         </a>
         <nav class="navbar">
             <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a onclick="scrollToSection('servicos')">Serviços</a></li>
-                <li><a href="#">Contato</a></li>
+                <li><a href="container" onclick="scrollToSection('container'); return false;">Inicio</a></li>
+                <li><a href="servico" onclick="scrollToSection('servicos'); return false;">Serviços</a></li>
+                <li><a href="footer" onclick="scrollToSection('footer'); return false;">Contato</a></li>
                 <li><a href="#">Sou cliente</a></li>
             </ul>
         </nav>
@@ -165,9 +271,9 @@ function injectMobileHeader() {
         </nav>
         <div class="mobile-menu">
             <ul>
-                <li class="nav-item"><a href="#" class="nav-link">Inicio</a></li>
-                <li class="nav-item"><a onclick="scrollToSection('servicos')" class="nav-link">Serviços</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Contato</a></li>
+                <li class="nav-item"><a href="container" onclick="scrollToSection('container'); return false;" class="nav-link">Inicio</a></li>
+                <li class="nav-item"><a href="servicos" onclick="scrollToSection('servicos'); return false;" class="nav-link">Serviços</a></li>
+                <li class="nav-item"><a href="contato" onclick="scrollToSection('footer'); return false;" class="nav-link">Contato</a></li>
                 <li class="nav-item"><a href="#" class="nav-link">Sou cliente</a></li>
             </ul>
         </div>
@@ -202,23 +308,43 @@ function updateImageHeader() {
  * @returns {string} - o caminho da imagem selecionada.
  */
 function updateImageItens() {
+    imagensItem.forEach(img => {
+        const imgElements = document.querySelectorAll(`#${img.id}`);
 
-    imagensItem.forEach(item => {
-        const imgElement = document.getElementById(item.id);
-        const imageUrl = applyUpdateImages(item);
-        // Define o src da imagem
-        imgElement.src = imageUrl;
+        imgElements.forEach(imgElement => {
+            const imageUrl = applyUpdateImages(img);
+    
+            console.log(imgElement);
+            // Define o src da imagem
+            imgElement.src = imageUrl;
+        });
     });
 }
 
 function updateImageWhatsapp() {
 
-    imagemWhatsapp.forEach(item => {
-        const imgElement = document.getElementById(item.id);
-        const imageUrl = applyUpdateImages(item);
-        // Define o src da imagem
-        imgElement.src = imageUrl;
-    });
+    if(window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches)
+    {
+        imagensWhatsappThemeLight.forEach(item => {
+            const imgElement = document.getElementById(item.id);
+            const imageUrl = applyUpdateImages(item);
+    
+            console.log(imageUrl);
+
+            // Define o src da imagem
+            imgElement.src = imageUrl;
+        });
+    }
+    else{
+        imagemWhatsapp.forEach(item => {
+            const imgElement = document.getElementById(item.id);
+            const imageUrl = applyUpdateImages(item);
+    
+            // Define o src da imagem
+            imgElement.src = imageUrl;
+        });
+
+    }
 }
 
 function updateImageFooter() {

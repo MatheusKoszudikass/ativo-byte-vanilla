@@ -23,10 +23,22 @@ let touchStartX = 0;
 let touchEndX = 0;
 
 
+
+
 function scrollToSection(sectionId) {
+    let navbarMobileIcon = document.getElementById('open-icon');
+    let navbarMobile = document.querySelector('.mobile-menu');
+    let MobileSection = document.getElementById('container'); 
     const section = document.getElementById(sectionId);
     const navHeight = document.querySelector('header').offsetHeight;
     const sectionTop = section.getBoundingClientRect().top + window.scrollY - navHeight;
+
+    if (navbarMobile != null && navbarMobile.classList.contains('open')) {
+        console.log("Aqui");
+        navbarMobileIcon.classList.remove('open-icon');
+        navbarMobile.classList.remove('open');
+        MobileSection.classList.remove('open');
+    }
     
     window.scrollTo({
         top: sectionTop,

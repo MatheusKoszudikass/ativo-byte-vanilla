@@ -10,8 +10,7 @@
 
 @font-face {
   font-family: "League Gothic";
-  src: url(../assets/font/LeagueGothic-Regular-VariableFont_wdth.woff) format('woff'),
-       url(../assets/font/LeagueGothic-Regular-VariableFont_wdth.ttf) format('truetype');
+  src: url(../assets/font/LeagueGothic-Regular-VariableFont_wdth.ttf) format("truetype");
   font-display: swap;
 }
 
@@ -301,6 +300,91 @@
     }
   }
 
+  section#servicos {
+    padding: 30px; /* Espaçamento interno */
+    margin: 0 1px; /* Espaçamento externo */
+    color:#ffa500;
+    height: auto;
+
+    & h2 {
+      text-align: center; /* Centraliza o título */
+      color: #fefefe; /* Cor do texto */
+      font-size: 40px;
+      font-family: "League Gothic", sans-serif;
+    }
+    
+
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+
+      h3 {
+        font-size: 45px;
+        text-align: center;
+        font-family: "League Gothic", sans-serif;
+      }
+
+      p {	
+        font-size: 20px;
+        margin: 10px 0 0 0;
+        text-align: center;
+        color: #fefefe;
+        
+      }
+
+      a {
+        background-color: transparent;
+        align-items: center;
+        text-align: center;
+        margin-top: 100px ;
+        border: none;
+        cursor: pointer;
+        width: 40%;
+        max-width: 100%;
+        border-radius: 50px;
+        border: 1px solid #ffffff;
+        cursor: pointer;
+      }
+    }
+
+    a:hover {
+      background-color: #40c351;
+    }
+
+    #landing-page, #sass, #ecommerce {
+      display: flex;
+      justify-content: center;
+
+      gap: 100px;
+
+      img {
+        width: 70%;
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  section#servicos article {
+    margin: 15px 0; /* Espaçamento entre os artigos */
+    padding: 15px; /* Espaçamento interno dos artigos */
+    border: 2px solid #ddd; /* Borda leve */
+    border-radius: 50px; /* Bordas arredondadas */
+    transition: transform 0.5s; /* Animação ao passar o mouse */
+  }
+
+  section#servicos article:hover {
+    transform: scale(1.03); /* Aumenta o tamanho ao passar o mouse */
+  }
+
+  section#servicos img {
+    width: 10%;
+    max-width: 100%; /* Imagem responsiva */
+    height: auto; /* Mantém a proporção */
+  }
+
   .whatsapp {
     display: fixed;
     position: fixed;
@@ -323,7 +407,6 @@
       font-weight: bold;
       font-family: "League Gothic", sans-serif;
       padding-top: 15%;
-      width: 100%;
       height: auto;
 
       position: relative;
@@ -334,13 +417,13 @@
         display: flex;
         flex-direction: column;
         width: 15%;
-        height: 100%;
         max-width: 100%;
         gap: 10px;
 
         img {
           display: flex;
           width: 100%;
+          height: 100%;
           height: auto;
         }
 
@@ -354,9 +437,9 @@
       .footer-social-media{
         display: flex;
         flex-direction: column;
-        width: 100%;
         padding: 10% 0;
-        gap: 10px;
+        width: 100%;
+        gap: 1px;
 
         h3 {
           font-size: 18px;
@@ -402,7 +485,7 @@
               display: flex;
 
               img {
-                width: 30px;
+                width: 20px;
               }
             }
           }
@@ -488,7 +571,7 @@
       a {
           text-decoration: underline;
           color: rgb(255, 255, 255);
-          font-size: 10px;
+          font-size: 13px;
       }
     }
   }
@@ -838,7 +921,7 @@
 
     .open {
       padding-top: 90px;
-      transition: max-height 0.6s ease, padding 0.6s ease; /* Adiciona transição para altura e padding */
+      transition: max-height 0.6s ease, padding 0.6s ease;
       section {
         .list {
           .item {
@@ -873,6 +956,17 @@
             display: block;
           }
         }
+      }
+    }
+    section#servicos {
+
+      div h3{
+
+         font-size: 33px;
+        }
+
+      div p{
+         font-size: 16px;
       }
     }
   }
@@ -1041,11 +1135,35 @@
         display: none;
       }
     }
-  }
 
-  .whatsapp {
-    bottom: 10px;
-    right: 10px;
+    section#servicos {
+
+      h2 {
+        font-size: 45px;
+      }
+  
+      div h3{
+  
+         font-size: 35px;
+        }
+  
+      div p{
+         font-size: 20px;
+      }
+  
+      div a {
+        width: 90%;
+      }
+  
+      #landing-page, #sass, #ecommerce {
+         flex-direction: column;
+         align-items: center;
+  
+         img {
+           width: 40%;
+         }
+      }
+    }
   }
 
   @media screen and (max-width: 514px) {
@@ -1114,6 +1232,33 @@
 
         #next {
           display: none;
+        }
+      }
+    }
+
+    section#servicos {
+
+      h2 {
+        font-size: 30px;
+      }
+
+      div h3{
+
+         font-size: 25px;
+        }
+
+      div p{
+         font-size: 15px;
+      }
+
+      #landing-page, #sass, #ecommerce {
+         flex-direction: column;
+         align-items: center;
+
+         img {
+          width: 70%;
+          max-width: 100%;
+          height: auto;
         }
       }
     }
@@ -1760,35 +1905,90 @@
       }
     }
     section#servicos {
-
-      background-color: #f9f9f9; /* Cor de fundo suave */
-      padding: 20px; /* Espaçamento interno */
-      margin: 20px 0; /* Espaçamento externo */
-      border-radius: 8px; /* Bordas arredondadas */
+      padding: 30px; /* Espaçamento interno */
+      margin: 0 1px; /* Espaçamento externo */
+      color:#946100;
+      height: auto;
 
       & h2 {
         text-align: center; /* Centraliza o título */
-        color: #333; /* Cor do texto */
+        color: #202020; /* Cor do texto */
+        font-size: 40px;
+        font-family: "League Gothic", sans-serif;
+      }
+      
+
+      div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+
+        h3 {
+          font-size: 45px;
+          text-align: center;
+          font-family: "League Gothic", sans-serif;
+        }
+
+        p {	
+          font-size: 20px;
+          margin: 10px 0 0 0;
+          text-align: center;
+          color: #202020;
+        }
+      }
+
+      a {
+        background-color: transparent;
+        align-items: center;
+        text-align: center;
+        margin-top: 50px ;
+        border: none;
+        cursor: pointer;
+        width: 40%;
+        max-width: 100%;
+        border-radius: 50px;
+        border: 1px solid #202020;
+        cursor: pointer;
+      }
+
+
+      a:hover {
+        background-color: #40c351;
+      }
+
+
+      #landing-page, #sass, #ecommerce {
+        display: flex;
+        justify-content: center;
+
+        gap: 100px;
+
+        img {
+          width: 70%;
+          max-width: 100%;
+          height: auto;
+        }
       }
     }
 
     section#servicos article {
       margin: 15px 0; /* Espaçamento entre os artigos */
       padding: 15px; /* Espaçamento interno dos artigos */
-      border: 1px solid #ddd; /* Borda leve */
-      border-radius: 5px; /* Bordas arredondadas */
-      transition: transform 0.2s; /* Animação ao passar o mouse */
+      border: 2px solid #ddd; /* Borda leve */
+      border-radius: 50px; /* Bordas arredondadas */
+      transition: transform 0.5s; /* Animação ao passar o mouse */
     }
 
     section#servicos article:hover {
-      transform: scale(1.02); /* Aumenta o tamanho ao passar o mouse */
+      transform: scale(1.03); /* Aumenta o tamanho ao passar o mouse */
     }
 
     section#servicos img {
+      width: 10%;
       max-width: 100%; /* Imagem responsiva */
       height: auto; /* Mantém a proporção */
     }
-    
 
     .whatsapp {
       display: fixed;
@@ -1890,7 +2090,7 @@
                 display: flex;
   
                 img {
-                  width: 30px;
+                  width: 20px;
                 }
               }
             }
@@ -1976,7 +2176,7 @@
         a {
             text-decoration: underline;
             color: rgb(255, 255, 255);
-            font-size: 10px;
+            font-size: 13px;
         }
       }
     }
@@ -2132,6 +2332,17 @@
         }
       }
 
+      section#servicos {
+
+         div h3{
+
+            font-size: 36px;
+           }
+
+         div p{
+            font-size: 18px;
+         }
+      }
     }
 
     @media screen and (max-width: 1230px) {
@@ -2291,6 +2502,18 @@
         }
       }
 
+      section#servicos {
+
+        div h3{
+
+           font-size: 33px;
+          }
+
+        div p{
+           font-size: 16px;
+        }
+     }
+
       footer{
         background-size: cover;
         background-repeat: no-repeat;
@@ -2429,9 +2652,11 @@
           }
         }
       }
+    }
+    
     
 
-      @media screen and (max-width: 898px) {
+    @media screen and (max-width: 898px) {
         .header-mobile {
           background-color: #000;
           z-index: 1; /* Colocar o header acima do conteúdo */
@@ -2591,12 +2816,41 @@
             display: none;
           }
         }
-      }
+      
       .whatsapp {
         bottom: 10px;
         right: 10px;
       }
+
       
+      section#servicos {
+
+        h2 {
+          font-size: 45px;
+        }
+
+        div h3{
+
+           font-size: 35px;
+          }
+
+        div p{
+           font-size: 20px;
+        }
+
+        div a {
+          width: 90%;
+        }
+
+        #landing-page, #sass, #ecommerce {
+           flex-direction: column;
+           align-items: center;
+
+           img {
+             width: 40%;
+           }
+        }
+      }
     }
 
     @media screen and (max-width: 514px) {
@@ -2668,7 +2922,33 @@
           }
         }
       }
-      
+
+      section#servicos {
+
+        h2 {
+          font-size: 30px;
+        }
+
+        div h3{
+
+           font-size: 25px;
+          }
+
+        div p{
+           font-size: 15px;
+        }
+
+        #landing-page, #sass, #ecommerce {
+           flex-direction: column;
+           align-items: center;
+
+           img {
+            width: 70%;
+            max-width: 100%;
+            height: auto;
+          }
+        }
+      }
     }
 
     @media screen and (max-width: 414px) {
@@ -2733,6 +3013,7 @@
           }
         }
       }
+
       .whatsapp {
         display: fixed;
         position: fixed;
