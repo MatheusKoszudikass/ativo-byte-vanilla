@@ -838,7 +838,7 @@
 
     .open {
       padding-top: 90px;
-      transition: max-height 0.6s ease, padding 0.6s ease; /* Adiciona transição para altura e padding */
+      transition: max-height 0.6s ease, padding 0.6s ease;
       section {
         .list {
           .item {
