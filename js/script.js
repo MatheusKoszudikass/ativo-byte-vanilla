@@ -10,7 +10,7 @@ let dots = indicator.querySelectorAll('ul li');
 let active = 0;
 let firstPosition = 0;
 let lastPosition = items.length - 1;
-let intervalTime = 5000; 
+let intervalTime = 5000;
 let autoSlide;
 let pauseTime = 10800;
 let pauseTimeout;
@@ -23,11 +23,23 @@ let touchStartX = 0;
 let touchEndX = 0;
 
 
+
+
 function scrollToSection(sectionId) {
+    let navbarMobileIcon = document.getElementById('open-icon');
+    let navbarMobile = document.querySelector('.mobile-menu');
+    let MobileSection = document.getElementById('container');
     const section = document.getElementById(sectionId);
     const navHeight = document.querySelector('header').offsetHeight;
     const sectionTop = section.getBoundingClientRect().top + window.scrollY - navHeight;
-    
+
+    if (navbarMobile != null && navbarMobile.classList.contains('open')) {
+        console.log("Aqui");
+        navbarMobileIcon.classList.remove('open-icon');
+        navbarMobile.classList.remove('open');
+        MobileSection.classList.remove('open');
+    }
+
     window.scrollTo({
         top: sectionTop,
         behavior: 'smooth'
@@ -56,24 +68,24 @@ function handleTouchEnd(event) {
     if (touchEndX < touchStartX) {
         nextItem(); // Deslizar para a esquerda, vai para o próximo item
         stopAutoSlide();
-        intervalTime = 5000; 
+        intervalTime = 5000;
     } else if (touchEndX > touchStartX) {
         prevItem(); // Deslizar para a direita, vai para o item anterior
         stopAutoSlide();
-        intervalTime = 5000; 
+        intervalTime = 5000;
     }
     resetSlideAfterPause();
 }
 
 function handleClick() {
-  stopAutoSlide();
-  resetSlideAfterPause();
+    stopAutoSlide();
+    resetSlideAfterPause();
 }
 
 function toggleMenu() {
     let navbarMobileIcon = document.getElementById('open-icon');
     let navbarMobile = document.querySelector('.mobile-menu');
-    let MobileSection = document.getElementById('container'); 
+    let MobileSection = document.getElementById('container');
     navbarMobile.classList.toggle('open');
     navbarMobileIcon.classList.toggle('open-icon');
 
@@ -124,7 +136,7 @@ function nextItem() {
 
     items[active].classList.add('active');
     addPauseEvents(items[active]); // Adiciona os eventos ao novo item ativo
-    intervalTime = 5000; 
+    intervalTime = 5000;
     updateDots(); // Atualiza os indicadores
 }
 
@@ -143,7 +155,7 @@ function prevItem() {
 
     items[active].classList.add('active');
     addPauseEvents(items[active]); // Adiciona os eventos ao novo item ativo
-    intervalTime = 5000; 
+    intervalTime = 5000;
     updateDots(); // Atualiza os indicadores
 }
 
