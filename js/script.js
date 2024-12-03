@@ -34,7 +34,6 @@ function scrollToSection(sectionId) {
     const sectionTop = section.getBoundingClientRect().top + window.scrollY - navHeight;
 
     if (navbarMobile != null && navbarMobile.classList.contains('open')) {
-        console.log("Aqui");
         navbarMobileIcon.classList.remove('open-icon');
         navbarMobile.classList.remove('open');
         MobileSection.classList.remove('open');
@@ -68,11 +67,9 @@ function handleTouchEnd(event) {
     if (touchEndX < touchStartX) {
         nextItem(); // Deslizar para a esquerda, vai para o próximo item
         stopAutoSlide();
-        intervalTime = 5000;
     } else if (touchEndX > touchStartX) {
         prevItem(); // Deslizar para a direita, vai para o item anterior
         stopAutoSlide();
-        intervalTime = 5000;
     }
     resetSlideAfterPause();
 }
@@ -103,7 +100,6 @@ function updateDots() {
 
 // Função para adicionar eventos de pausa ao novo item ativo
 function addPauseEvents(item) {
-    item.addEventListener('click', handleClick);
     item.addEventListener('touchstart', handleTouchStart);
     item.addEventListener('touchend', handleTouchEnd);
     item.addEventListener('mouseover', stopAutoSlide); // Pausar o slide ao passar o mouse
@@ -113,7 +109,6 @@ function addPauseEvents(item) {
 
 // Função para remover eventos de pausa do item ativo
 function removePauseEvents(item) {
-    item.removeEventListener('click', handleClick);
     item.removeEventListener('touchstart', handleTouchStart);
     item.removeEventListener('touchmove', handleTouchMove);
     item.removeEventListener('touchend', handleTouchEnd);
@@ -136,7 +131,6 @@ function nextItem() {
 
     items[active].classList.add('active');
     addPauseEvents(items[active]); // Adiciona os eventos ao novo item ativo
-    intervalTime = 5000;
     updateDots(); // Atualiza os indicadores
 }
 
@@ -155,7 +149,6 @@ function prevItem() {
 
     items[active].classList.add('active');
     addPauseEvents(items[active]); // Adiciona os eventos ao novo item ativo
-    intervalTime = 5000;
     updateDots(); // Atualiza os indicadores
 }
 

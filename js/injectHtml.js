@@ -1,3 +1,4 @@
+var msgCookies = document.getElementById('cookies-msg');
 let imagensHeader = [
     {
         id: 'responsive-logo-img',
@@ -246,7 +247,7 @@ function injectDesktopHeader() {
                 <li><a href="container" onclick="scrollToSection('container'); return false;">Inicio</a></li>
                 <li><a href="servico" onclick="scrollToSection('servicos'); return false;">Serviços</a></li>
                 <li><a href="footer" onclick="scrollToSection('footer'); return false;">Contato</a></li>
-                <li><a href="#">Sou cliente</a></li>
+                <li><a href="https://cliente.ativobyte.com.br/">Sou cliente</a></li>
             </ul>
         </nav>
     </header>`;
@@ -274,7 +275,7 @@ function injectMobileHeader() {
                 <li class="nav-item"><a href="container" onclick="scrollToSection('container'); return false;" class="nav-link">Inicio</a></li>
                 <li class="nav-item"><a href="servicos" onclick="scrollToSection('servicos'); return false;" class="nav-link">Serviços</a></li>
                 <li class="nav-item"><a href="contato" onclick="scrollToSection('footer'); return false;" class="nav-link">Contato</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Sou cliente</a></li>
+                <li class="nav-item"><a href="https://cliente.ativobyte.com.br/" class="nav-link">Sou cliente</a></li>
             </ul>
         </div>
     </header>`;
@@ -284,7 +285,49 @@ function injectMobileHeader() {
     updateImageHeader();
 };
 
+function injectGoogleAnalytics() {
+    const script = document.createElement('script');
+    script.src = "https://www.googletagmanager.com/gtag/js?id=G-SC43RELF22";
+    script.async = true;
+    document.head.appendChild(script);
 
+    const inLineScript = document.createElement('script');
+    inLineScript.innerHTML = `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-SC43RELF22');`;
+
+        document.head.appendChild(inLineScript);
+}
+
+function hideCookieConsent() {
+    document.getElementById('cookies-msg').style.display = 'none';
+}
+
+function acceptCookies() {
+    localStorage.lgpd ='true';
+    msgCookies.classList.remove('show');
+    injectGoogleAnalytics();
+    // localStorage.setItem('cookieConsent', 'accepted');
+    // hideCookieConsent();
+}
+
+function declineCookies() {
+    localStorage.lgpd = 'false';
+    msgCookies.classList.remove('show');
+    // localStorage.setItem('cookieConsent', 'declined');
+    // hideCookieConsent();
+}
+
+function checkCookieConsent() {
+    if (localStorage.lgpd == 'true') {
+        injectGoogleAnalytics();
+        msgCookies.classList.remove('show');
+    }else {
+        msgCookies.classList.add('show');
+    }
+}
 
 /**
  * @description
@@ -314,7 +357,6 @@ function updateImageItens() {
         imgElements.forEach(imgElement => {
             const imageUrl = applyUpdateImages(img);
 
-            console.log(imgElement);
             // Define o src da imagem
             imgElement.src = imageUrl;
         });
@@ -327,8 +369,6 @@ function updateImageWhatsapp() {
         imagensWhatsappThemeLight.forEach(item => {
             const imgElement = document.getElementById(item.id);
             const imageUrl = applyUpdateImages(item);
-
-            console.log(imageUrl);
 
             // Define o src da imagem
             imgElement.src = imageUrl;
@@ -411,6 +451,7 @@ function updateHeader() {
     }
 }
 
+checkCookieConsent()
 
 window.onload = updateImageItens(), updateImageWhatsapp(), updateImageFooter();
 
